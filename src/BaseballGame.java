@@ -8,21 +8,18 @@ public class BaseballGame {
         this.randomNumber = generatedRandNum();
     }
 
+    //Game의 진행 Method
     public int play() {
         Scanner scanner = new Scanner(System.in);
-
         int gameTries = 0; // Game 시도횟수
+
+        //무한 loop 시작
         while (true) {
-            // 1. 유저에게 입력값을 받음
-            // 2. 올바른 입력값을 받았는지 검증
-            // 3. 게임 진행횟수 증가
-            // 4. 스트라이크 개수 계산
-            // 5. 정답여부 확인, 만약 정답이면 break 를 이용해 반복문 탈출
-            // 6. 볼 개수 계산
-            // 7. 힌트 출력
+            // Player에게 입력값을 받음
             System.out.print("\nPlayer 숫자 입력 : ");
             String playerInput = scanner.nextLine();
 
+            //올바른 입력값을 받았는지 검증
             if (!validateInput(playerInput)) {
                 System.out.println("올바르지 않은 값입니다.");
                 continue;
@@ -31,6 +28,7 @@ public class BaseballGame {
             // Game 시도횟수 증가
             gameTries++;
 
+            //Strike와 Ball의 개수 계산 및 정답여부 확인
             int strikes = countStrike(playerInput);
             int balls = countBall(playerInput);
 
