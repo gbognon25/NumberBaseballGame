@@ -33,18 +33,18 @@ public class BaseballGame {
             int balls = countBall(playerInput);
 
             if (strikes == 3) {
-                System.out.println("축하합니다~!!!");
+                System.out.println(strikes + " Strikes~");
                 break;
-            }
-            else if (strikes == 0 && balls == 0) {
+            } else if (strikes == 0 && balls == 0) {
                 System.out.println("Out");
-            }
-            else {
+            } else {
                 System.out.println(strikes + " Strike(s), " + balls + " Ball(s).");
             }
         }
 
-        System.out.println("\n정답은: " + randomNumber); //정답 출력
+        System.out.println("정답입니다!!!");
+
+//        System.out.println("\n정답은: " + randomNumber); //정답 출력
         return gameTries;
     }
 
