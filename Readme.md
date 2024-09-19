@@ -29,8 +29,8 @@ Computer가 1에서 9 사이에 생성한 3 또는 4 또는 5자리의 비밀 �
 ```
 
 ### 주요 기능
-#### validateInput () Method
-
+#### "validateInput()" Method
+"validateInput()"는 player가 문자 또는 1~9 사이에 서로 다른 수를 입력한지 확인하는 method입니다.
 
 ``` Java
 protected boolean validateInput(String input) {
@@ -49,3 +49,52 @@ protected boolean validateInput(String input) {
         return true;
     }
 ```
+#### "setDifficultyLevel()" Method
+"setDifficultyLevel()" 자리수를 설정하는 method입니다.
+
+```Java
+private static void setDifficultyLevel() {
+        Scanner input = new Scanner(System.in);
+
+        //무한 loop 시작
+        while (true) {
+            System.out.println("\n설정하고자 하는 자리수를 입력하세요.(3, 4, 5):");
+
+            try {
+                int difficultyChoice = Integer.parseInt(input.next()); //Player로부터 자리수(난이도)의 입력을 받음
+                if (difficultyChoice == 3 || difficultyChoice == 4 || difficultyChoice == 5) {
+                    difficultyLevel = difficultyChoice;
+                    System.out.println(difficultyLevel + "자리수 난이도로 설정되었습니다.");
+                    System.out.println("\n< 게임을 시작합니다 >");
+                    break; // 올바른 값 입력시 loop가 종료됩니다.
+                } else {
+                    System.out.println("3, 4, 5 중 하나를 선택해 주세요");
+                }
+
+            } catch (NumberFormatException e) {
+                System.out.println("입력을 잘 못했습니다. 숫자를 입력해 주세요.");
+            }
+        }
+        startGame(); //자리수 설정 후 Game 시작됩니다.
+    }
+```
+#### "gameRecordsDisplay()" Method
+Game의 기록을 보여주는 method입니다.
+
+```Java
+  private static final List<Integer> gameAttempts = new ArrayList<>();
+  private static void gameRecordsDisplay() {
+        if (gameAttempts.isEmpty()) {
+            System.out.println("게임의 기록이 없습니다.");
+        } else {
+            System.out.println("\n< 게임 기록 보기 >");
+            for (int i = 0; i < gameAttempts.size(); i++) {
+                System.out.println((i + 1) + "번째 게임 : 시도 횟수 - " + gameAttempts.get(i));
+            }
+        }
+    }
+```
+
+### Feeback
+Code를 개선하고 더 나아지게 하기 위해 자유롭게 feedback을 주고 기여해 주세요. 
+Feel free to give feedback and make your contributions to improve the code and make it way better.
