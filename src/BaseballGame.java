@@ -74,12 +74,11 @@ public class BaseballGame {
     //Player가 1~9 사이에 서로 다른 수를 입력한지 확인하는 Method
     //Player가 입력한 값의 자리수는 선택한 난이도와 동일해야 합니다.
     protected boolean validateInput(String input) {
-
         //Player의 입력란 자리수 확인
         if (input.length() != difficultyLevel) {
             return false;
         }
-        //'toCharArray' Method을 통해 Player가 입력한 숫자를 char type Set Collection으로 변환합니다.
+        //'toCharArray' Method을 통해 Player가 입력한 숫자를 char type Set Collection의 객체로 변환합니다.
         //그리고 입력 값에 문자, '0' 또는 중복이 있는지 확인
         Set<Character> numSet = new HashSet<>();
         for (char character : input.toCharArray()) {
