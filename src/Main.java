@@ -49,8 +49,7 @@ public class Main {
             System.out.println("\n설정하고자 하는 자리수를 입력하세요.(3, 4, 5):");
 
             try {
-                int difficultyChoice = input.nextInt(); //Player로부터 자리수(난이도)의 입력을 받음
-
+                int difficultyChoice = Integer.parseInt(input.next()); //Player로부터 자리수(난이도)의 입력을 받음
                 if (difficultyChoice == 3 || difficultyChoice == 4 || difficultyChoice == 5) {
                     difficultyLevel = difficultyChoice;
                     System.out.println(difficultyLevel + "자리수 난이도로 설정되었습니다.");
@@ -59,9 +58,8 @@ public class Main {
                 } else {
                     System.out.println("3, 4, 5 중 하나를 선택해 주세요");
                 }
-            }
-            // 사용자가 숫자가 아닌 값을 입력했을 때 발생하는 예외 처리
-            catch (NumberFormatException e) {
+
+            } catch (NumberFormatException e) {
                 System.out.println("입력을 잘 못했습니다. 숫자를 입력해 주세요.");
             }
         }
