@@ -17,7 +17,7 @@ public class Main {
 
             switch (userChoice) {
                 case 0:
-                    setDifficultyLevel();  //자리수 정
+                    setDifficultyLevel();  //자리수 설정
                     break;
 
                 case 1:
