@@ -63,7 +63,7 @@ public class BaseballGame {
         //random 숫자 shuffle
         Collections.shuffle(digitsNumbers);
 
-        //생성된 숫자를 문자열로 변환하고 문자열을 반환합니다.
+        //생성된 int의 List 객체를 문자열로 변환하고 문자열을 반환합니다.
         StringBuilder randomNumber = new StringBuilder();
         for (int i = 0; i < difficultyLevel; i++) {
             randomNumber.append(digitsNumbers.get(i));
