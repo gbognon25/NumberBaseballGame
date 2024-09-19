@@ -17,7 +17,7 @@ public class Main {
 
             switch (userChoice) {
                 case 0:
-                    setNumberCount();  //자리수 정
+                    setDifficultyLevel();  //자리수 정
                     break;
 
                 case 1:
@@ -41,7 +41,7 @@ public class Main {
     }
 
     //자리수를 설정하는 Method (0번을 누른시)
-    private static void setNumberCount() {
+    private static void setDifficultyLevel() {
         Scanner input = new Scanner(System.in);
 
         //무한 loop 시작
