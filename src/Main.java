@@ -9,6 +9,7 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
+        //무한 loop 시작
         while (true) {
             System.out.println("\n환영합니다! 원하시는 번호를 입력해주세요");
             System.out.println("0. 자리수 설정 1. 게임 시작하기  2. 게임 기록 보기  3. 종료하기");
