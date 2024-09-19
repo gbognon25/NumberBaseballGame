@@ -43,6 +43,7 @@ public class Main {
     private static void setNumberCount() {
         Scanner input = new Scanner(System.in);
 
+        //무한 loop 시작
         while (true) {
             System.out.println("\n설정하고자 하는 자리수를 입력하세요.(3, 4, 5):");
 
