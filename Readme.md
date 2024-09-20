@@ -2,6 +2,10 @@
 Computer가 1에서 9 사이에 생성한 3 또는 4 또는 5자리의 비밀 숫자를 player가 맞추는 game입니다. 생성된 숫자는 중복되지 않습니다.
 (GUI를 사용하지 않습니다. Console 실행 가능한 환경에서 실행됩니다.)
 
+### Game 목표
+- Player는 최소한의 시도로 상대방의 비밀 숫자를 맞추는 것이 목표입니다.
+- 정답을 맞추면 게임에서 승리합니다.
+
 ### Project 정보
 - Project Type: 개인 Project
 - Programming language: Java
@@ -95,6 +99,6 @@ Game의 기록을 보여주는 method입니다.
     }
 ```
 
-### Feeback
+### Feedback
 Code를 개선하고 더 나아지게 하기 위해 자유롭게 feedback을 주고 기여해 주세요. 
 Feel free to give feedback and make your contributions to improve the code and make it way better.
